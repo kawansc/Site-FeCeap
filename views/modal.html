@@ -1,0 +1,36 @@
+<div id="modal" class="hide">
+  <div class="content">
+    <h1>Novo Projeto</h1>
+
+    <form action="/" method="post">
+      <div class="input-wrapper">
+        <label for="title">Título do Projeto</label>
+        <input id="title" type="text" name="title" required />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="category">Categoria</label>
+        <input id="category" type="text" name="category" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="image">Link da Imagem</label>
+        <input id="image" type="url" name="image"/>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="description">Descriçao do Projeto</label>
+        <textarea id="description" name="description" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="link">Link do Projeto</label>
+        <input id="link" type="url" name="link"/>
+      </div>
+
+      <a href="#" onclick="onOff()">Voltar</a>
+      <button class="button">Salvar</button>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+{
+  "name": "feceap-kawan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto de aula com cadastro, listagem e exclusão de projetos",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js", "test": "node --test" },
+  "engines": { "node": ">=22.13.0" },
+  "dependencies": { "express": "^5.2.1", "nunjucks": "^3.2.4" }
+}

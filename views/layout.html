@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeCEAP 2024</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.freepik.com/256/6886/6886075.png?semt=ais_hybrid"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body id="{{bodyId}}">
+    <div id="container">{% block content %} {% endblock %}</div>
+
+    {% include "modal.html" %}
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+*.bd
+*.bd-journal
+*.bd-wal
+*.bd-shm
+.npm-cache/
+.env

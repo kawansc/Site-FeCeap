@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% set bodyId="page-projects" %} {% block content %}
+<header>
+  <a href="/">
+    <img id="logo" src="FeCEAP-logoAlef2.svg" alt="FeCEAP-logo" />
+  </a>
+  <nav>
+    <li><a href="/">Início</a></li>
+    <li><a href="#" class="button" onclick="onOff()">Novo Projeto</a></li>
+  </nav>
+</header>
+
+<section id="title">
+  <p>em exibição</p>
+  <h1>Projetos</h1>
+</section>
+
+<main>
+  <section id="projects">
+    {% for projeto in projetos %}
+    <div class="project">
+      <img src="{{ projeto.imagem }}" alt="{{ projeto.titulo }}" />
+
+      <div class="content">
+        <h3>{{ projeto.titulo }}</h3>
+        <p>{{ projeto.categoria }}</p>
+
+        <div class="description">{{ projeto.descricao }}</div>
+        <a href="{{ projeto.url }}">Ir para o projeto</a>
+<form action="/excluir/{{ projeto.id }}" method="post" class="delete-project" onsubmit="return confirm('Deseja excluir este projeto? Esta ação não pode ser desfeita.');">
+  <button type="submit" class="button delete-button" aria-label="Excluir projeto {{ projeto.titulo }}">Excluir projeto</button>
+</form>
+      </div>
+    </div>
+    {% else %}<p class="empty-projects">Nenhum projeto cadastrado. Clique em Novo Projeto ou Adicionar Projeto para começar.</p>{% endfor %}
+  </section>
+</main>
+
+<footer>
+  Com ❤️ <a href="https://ceappedreira.org.br/" target="_blank">CEAP</a>
+</footer>
+{% endblock %}
+
